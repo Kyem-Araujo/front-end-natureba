@@ -6,9 +6,9 @@
 
 <body>
 
-    <div class='container fonte'>
+    <div class='container fonte' height="1000px">
      
-        <div class=" card" >
+        <div class=" card"  >
             <h1> Cadastre-se </h1>
 
             <div class='label-float d-flex justify-content-center'>
@@ -23,17 +23,22 @@
             </div>
 
             <div class="label-float d-flex justify-content-center">
+                <input [(ngModel)]='usuario.nomeUsuario' type="text" id="nomeSocial" placeholder="" required>
+                <label for="nomeSocial">Nome de usuário*</label>
+            </div>
+
+            <div class="label-float d-flex justify-content-center">
                 <input [(ngModel)]='usuario.cpf'type="text" id="cpf" placeholder="" required>
                 <label for="cpf">CPF*</label>
             </div>
 
             <div class="label-float d-flex justify-content-center">
-                <input [(ngModel)]='usuario.emailUsuario' type="text" id="email" placeholder="" required>
+                <input [(ngModel)]='usuario.emailUsuario' type="password" id="email" placeholder="" required>
                 <label for="email">E-mail*</label>
             </div>
 
             <div class="label-float d-flex justify-content-center">
-                <input (input)='confirmSenha($event)' type="text" id="senha" placeholder="" required>
+                <input (input)='confirmSenha($event)' type="password" id="senha" placeholder="" required>
                 <label for="senha">Senha*</label>
             </div>
 

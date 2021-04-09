@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -11,24 +13,47 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./criarproduto.component.css']
 })
 export class CriarprodutoComponent implements OnInit {
-
-  
   produto: Produto = new Produto
-  
 
-  constructor(private produtoService: ProdutoService, private router: Router) { }
+  categoria: Categoria = new Categoria()
+  listaCategorias: Categoria[]
+  idCategoria: number
+
+  usuario: Usuario = new Usuario()
+  idUsuario = environment.cpf
+
+  constructor(private produtoService: ProdutoService, 
+    private categoriaService: CategoriaService, 
+    private router: Router) { }
 
   ngOnInit() {
     window.scroll(0,0)
+    this.findAllCategorias()
+  }
+
+  findAllCategorias() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
+      this.listaCategorias = resp
+    })
+  }
+
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+      this.categoria
+    })
   }
 
   criarProduto() {
-    
-    this.produtoService.criarProdutoPorUsuario(this.produto).subscribe((resp: Produto) => {
+    this.categoria.idCategoria = this.idCategoria
+    this.produto.categoria = this.categoria
+
+    this.usuario.cpf = this.idUsuario
+    this.produto.usuario = this.usuario
+
+    this.produtoService.criarProdutoPorUsuario(this.produto, environment.cpf).subscribe((resp: Produto) => {
       this.produto = resp
-      this.router.navigate(['/meusProdutos'])
       alert('Parabéns pelo novo produto!')
+      this.router.navigate(['/meuPerfil/meusProdutos'])
     })
   }
 }
-

@@ -9,6 +9,11 @@ import { CriarprodutoComponent } from './criarproduto/criarproduto.component';
 import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 import { NossoTimeComponent } from './nosso-time/nosso-time.component';
+
+import { PaginaProdutoVendedorComponent } from './pagina-produto-vendedor/pagina-produto-vendedor.component';
+
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+
 import { TelaFavoritosComponent } from './tela-favoritos/tela-favoritos.component';
 import { TelaProdutosComponent } from './tela-produtos/tela-produtos.component';
 import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
@@ -16,19 +21,23 @@ import { TelaUsuarioComponent } from './tela-usuario/tela-usuario.component';
 const routes: Routes = [
   {path: '', redirectTo: 'paginaInicial', pathMatch: 'full'},
 
-  {path:'alterarCadastro', component: AlterarcadastroComponent},
-  {path:'alterarProduto', component: AlterarprodutoComponent},
+  {path: 'meuPerfil/alterarCadastro', component: AlterarcadastroComponent},
+  {path: 'alterarCadastro/:id', component: AlterarcadastroComponent},
+  {path: 'meuPerfil/meusProdutos/verProduto/id:Produto/alterarProduto/:idProduto', component: AlterarprodutoComponent},
+  {path: 'meuPerfil/meusProdutos/alterarProduto/:idProduto/:cpf', component: AlterarprodutoComponent},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'comoFunciona', component: ComoFuncionaComponent},
   {path: 'paginaInicial', component: CorpoHomeComponent},
-  {path: 'criarProduto', component: CriarprodutoComponent},
+  {path: 'meuPerfil/meusProdutos/criarProduto', component: CriarprodutoComponent},
   {path: 'nossoTime', component: NossoTimeComponent},
-  {path: 'meusFavoritos', component: TelaFavoritosComponent},
-  {path: 'meusProdutos', component: TelaProdutosComponent},
-  {path: 'minhaPagina', component: TelaUsuarioComponent},
-  {path: 'minhasCompras', component: MinhasComprasComponent},
+  {path: 'meuPerfil/meusFavoritos', component: TelaFavoritosComponent},
+  {path: 'meuPerfil/meusProdutos', component: TelaProdutosComponent},
+  {path: 'meuPerfil/meusProdutos/verProduto/:idProduto', component: PaginaProdutoVendedorComponent},
+  {path: 'meuPerfil/minhasCompras', component: MinhasComprasComponent},
   {path: 'logado', component: MenuLogadoComponent},
-  {path: 'usuario', component:TelaUsuarioComponent}
+  {path: 'meuPerfil', component:TelaUsuarioComponent},
+  {path: 'menuLogado', component:MenuLogadoComponent},
+  {path: 'quemSomos', component: QuemSomosComponent}
 ];
 
 @NgModule({

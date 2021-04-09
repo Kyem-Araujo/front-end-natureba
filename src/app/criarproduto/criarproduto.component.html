@@ -21,8 +21,13 @@
                     </div>
 
                     <div class="label-float d-flex justify-content-center">
-                        <input type="text" id="EscolhaUmaCategoria" placeholder="" required>
+                        
                         <label for="EscolhaUmaCategoria">Escolha uma categoria*</label>
+                        <select class="form" name="categoria" id="categoria" class="form-control" [(ngModel)]='idCategoria' (change)='findByIdCategoria'>
+                            <option *ngFor='let item of listaCategorias' value="{{item.idCategoria}}">
+                                {{item.departamento}}
+                            </option>
+                        </select>
 
                     </div>
 
@@ -66,14 +71,14 @@
                 <div class="card-body container-fluid pt-5" style="background-color: #FFFFFF">
                     <h1 class="pb-3" style="padding-top: px;"> Descrição do produto </h1>
                     <p class="mb-2" style="color: #84A59D; font-size: 16px;">Escreva uma descrição bem legal do seu produto</p>
-                    <textarea  [(ngModel)]='produto.descricao' style="max-width:100%;" maxlength="500" name="text" id="Descriçao" cols="85" rows="10"></textarea>
+                    <textarea  [(ngModel)]='produto.descricao' style="max-width:100%;" maxlength="500" name="text" id="Descriçao" cols="95" rows="10"></textarea>
                 </div>
                 <div class="col mx-auto text-center">
-                    <img src="https://imgur.com/x2TMW7E.png" class="img-fluid" width="278" height="278"
+                    <img src="https://imgur.com/x2TMW7E.png" class="img-fluid" width="278" height="300"
                         alt="desenho de homem passando cartão na máquina">
                 </div>
                 <div class="label-float d-flex justify-content-end pt-3 px-5">
-                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                    <button (click)='criarProduto()' type="button" class="btn btn-primary" data-toggle="modal"
                         data-target="#ExemploModalCentralizado">
                         Finalizar cadastro
                     </button>

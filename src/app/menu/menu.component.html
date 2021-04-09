@@ -28,19 +28,19 @@
 
             <li>
                 <a href="https://www.facebook.com/" target="_blank" class="icoFacebook" alt='Icone do Facebook'>
-                    <i class=" fa fa-facebook-square" aria-hidden="true"></i>
+                    <img class="fa" src="https://i.imgur.com/uHVSXNv.png" width="28px" height="28px">
                 </a>
             </li>
-
+            
             <li>
                 <a href="https://www.instagram.com/" target="_blank" class="icoInstagram" alt='Icone do instagram'>
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <img class="fa" src="https://i.imgur.com/52SqSWU.png" width="28px" height="28px">
                 </a>
             </li>
 
             <li>
                 <a href="https://www.twitter.com/" target="_blank" class="icoTwitter" alt='Icone do twitter'>
-                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    <img class="fa" src="https://i.imgur.com/ycjJ7yp.png" width="28px" height="28px">
                 </a>
             </li>
 
@@ -55,8 +55,9 @@
 <!--logo-->
 
 <div class=" d-flex justify-content-center">
-    <img src="https://i.imgur.com/qK0vDVm.jpg" width="250" height="260" alt="Logotipo Natureba">
-
+    <a routerLink='paginaInicial' class="icoInstagram" alt='Logo Natureba'>
+        <img src="https://i.imgur.com/qK0vDVm.jpg" width="250" height="260" alt="Logotipo Natureba">
+    </a>
 </div>
 
 <!--/logo-->
@@ -164,7 +165,11 @@
 
                                 <!--Botão de Entrar-->
                                 <div class="justify-center">
-                                    <button (click)='entrar()' class="bt-entrar">Seja bem-vinde</button>
+
+                                    <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal" >Seja bem-vinde</button>
+
+                                    <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal"  >Seja bem-vinde</button>
+
                                 </div>
                                 <!--/Botão de Entrar-->
                                 <div class="justify-center">
@@ -175,7 +180,7 @@
 
                                 <!--Botão de Cadastrar-->
                                 <div class="justify-center">
-                                    <button routerLink='/cadastrar' class="bt-entrar">Venha para nossa Ecovila</button>
+                                    <button routerLink='/cadastrar' class="bt-entrar close" data-dismiss="modal">Venha para nossa Ecovila</button>
                                 </div>
                                 <!--Botão de Cadastrar-->
 

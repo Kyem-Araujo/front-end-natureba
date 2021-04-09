@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-menu-logado',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuLogadoComponent implements OnInit {
 
-  constructor() { }
+  nomeUsuario = environment.nomeUsuario
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  sair() {
+    this.router.navigate(['/paginaInicial'])
+    environment.token = ''
+    environment.cpf = ''
+    environment.emailUsuario = ''
+    environment.nomeCompletoUsuario = ''
+    environment.nomeSocial = ''
+    environment.nomeUsuario = ''
+    environment.senhaUsuario = ''
+  }
 }

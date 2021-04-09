@@ -46,7 +46,7 @@
 
                 <div class="col mx-auto text-center">
 
-                    <h2 class="cor card-title">Você plantou x árvores</h2>
+                    <h2 class="cor card-title">Você plantou {{usuario.contadorArvore}} árvores!</h2>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
 
                         <p class="card-text">Veja todos os seus anúncios e adicione novos produtos. Faça vendas para que
                             nossos consumidores fiquem mais bonites do que nunca.</p>
-                        <a href="#" class="btn btn-primary">Ver anuncios</a>
+                        <a routerLink="meusProdutos" class="btn btn-primary">Ver meus anúncios</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                         </div>
 
                         <p class="card-text">Você tinha gostado de algo e quer comprar agora? Reveja agora os seus produtos favoritos e experimente. </p>
-                        <a href="#" class="btn btn-primary">Ver favoritos</a>
+                        <a routerLink="meusFavoritos" class="btn btn-primary">Ver favoritos</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <p class="card-text">Seu celular mudou? Altere seus dados para segurança durante suas compras e/ou vendas.</p>
-                        <a href="#" class="btn btn-primary">Alterar cadastro</a>
+                        <a class="btn btn-primary" [routerLink]="['alterarCadastro', idUsuario ]">Alterar cadastro</a>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                     <div class=" card-body">
                         <div class="row">
                             <div class="col-sm-6">
-                                <h5 class="font-weight-bold card-title text-nowrap">Minhas compras?</h5>
+                                <h5 class="font-weight-bold card-title text-nowrap" routerLink="/minhasCompras">Quer conferir de novo?</h5>
                             </div>
 
                             <div class="col-sm-6 d-flex justify-content-end">
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                         <p class="card-text"> Tá afim de ver o que você ja comprou? Veja detalhes do seu histórico </p>
-                        <a href="#" class="btn btn-primary">Ver minhas compras</a>
+                        <a routerLink="minhasCompras" class="btn btn-primary">Ver minhas compras</a>
                     </div>
                 </div>
             </div>

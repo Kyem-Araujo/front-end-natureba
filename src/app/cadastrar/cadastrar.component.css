@@ -109,6 +109,7 @@ body {
   background-attachment: fixed;
   min-height: 995px;
   
+  
  
     
   
@@ -119,10 +120,10 @@ body {
   padding: 60px;
   border-radius: 4%;  
   width: 694px; /*largura*/
-  Height: 800px;
-  left: 374px; /*movimento*/
+  Height: 820px;
+  left: 200px; /*movimento*/
   top: 100px; /*distacia do topo*/ 
-  
+  display:flex;
   
 
 }

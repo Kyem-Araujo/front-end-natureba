@@ -8,22 +8,20 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-tela-usuario',
-  templateUrl: './tela-usuario.component.html',
-  styleUrls: ['./tela-usuario.component.css']
+  selector: 'app-pagina-produto-vendedor',
+  templateUrl: './pagina-produto-vendedor.component.html',
+  styleUrls: ['./pagina-produto-vendedor.component.css']
 })
-export class TelaUsuarioComponent implements OnInit {
-
+export class PaginaProdutoVendedorComponent implements OnInit {
+ 
   produto: Produto = new Produto
 
   categoria: Categoria = new Categoria()
   listaCategorias: Categoria[]
   idCategoria: number
-  contadorArvore = environment.contadorArvore
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.cpf
-  
 
   constructor(private produtoService: ProdutoService, 
     private categoriaService: CategoriaService, 

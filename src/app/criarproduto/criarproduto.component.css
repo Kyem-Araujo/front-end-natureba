@@ -86,7 +86,9 @@ ul.social-networks li{
   
     /* formulario de cadastro*/
     
-  
+  .card{
+    height: 900px;
+  }
   
   .container {
     display: flex;
@@ -241,3 +243,6 @@ ul.social-networks li{
       font-size: 16px;
     }
   
+    .form{
+      outline: none;
+    }

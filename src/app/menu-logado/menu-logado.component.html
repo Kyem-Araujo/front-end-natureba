@@ -63,10 +63,22 @@
 <!--/logo-->
 
 <!-- IconeUser-->
-<div class="d-flex justify-content-end pr-4">
-    <button class="btn btn-floating " data-toggle="modal" data-target="#ExemploModalCentralizado" routerLink='/meuPerfil'>
-        <img src="https://i.imgur.com/lAnmYcd.png" width="40" height="40" alt="icone do login">
-    </button>
+<div class="container-fluid tamanho d-flex justify-content-end">
+    <ul class="nav nav-tabs">
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle adapt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, {{nomeUsuario}}</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink='meuPerfil'>Meu perfil</a>
+            <a class="dropdown-item" routerLink="meuPerfil/minhasCompras">Minhas compras</a>
+            <a class="dropdown-item" routerLink="meuPerfil/meusFavoritos">Meus favoritos</a>
+            <a class="dropdown-item" routerLink="meuPerfil/meusProdutos">Meus produtos</a>
+            <a class="dropdown-item" (click)='sair()'>Sair</a>
+          </div>
+        </li>
+        
+      </ul>
+
 </div>
 <!-- /IconeUser-->
 
@@ -125,21 +137,5 @@
 </nav>
 
 <!--/menuProdutos-->
-<div class="container-fluid tamanho d-flex justify-content-end">
-    <ul class="nav nav-tabs">
-  
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle adapt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, {{nomeUsuario}}</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" routerLink='meuPerfil'>Meu perfil</a>
-            <a class="dropdown-item" routerLink="meuPerfil/minhasCompras">Minhas compras</a>
-            <a class="dropdown-item" routerLink="meuPerfil/meusFavoritos">Meus favoritos</a>
-            <a class="dropdown-item" routerLink="meuPerfil/meusProdutos">Meus produtos</a>
-            <a class="dropdown-item" (click)='sair()'>Sair</a>
-          </div>
-        </li>
-        
-      </ul>
 
-</div>
 

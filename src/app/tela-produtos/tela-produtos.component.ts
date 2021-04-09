@@ -20,6 +20,9 @@ export class TelaProdutosComponent implements OnInit {
   idUsuario = environment.cpf
   usuarioService: UsuarioService
 
+  key = 'data'
+  reverse = true
+
   constructor(private produtoService: ProdutoService, 
     
     private router: Router) { }

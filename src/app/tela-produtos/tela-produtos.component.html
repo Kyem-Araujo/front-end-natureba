@@ -11,9 +11,9 @@
             </div>
 
         </div>
-        
+
         <div class="card mr-4 ml-4 ">
-            <div class=" card-group text-center" *ngFor='let item of usuario.produtosUsuario'>
+            <div class=" card-group text-center" *ngFor='let item of usuario.produtosUsuario | orderBy : key : reverse'>
                 <div class="card ">
                     <img class="card-img-top" src="{{item.fotoProduto1}}" alt="Imagem de capa do card">
                     <div class="card-body">

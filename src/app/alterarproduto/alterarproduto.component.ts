@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -26,7 +27,8 @@ export class AlterarprodutoComponent implements OnInit {
   constructor(private produtoService: ProdutoService, 
     private categoriaService: CategoriaService, 
     private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router,
+    private alertas: AlertasService) { }
 
   ngOnInit() {
     window.scroll(0,0)
@@ -59,7 +61,7 @@ export class AlterarprodutoComponent implements OnInit {
 
     this.produtoService.alterarProduto(this.produto, this.produto.idProduto, environment.cpf).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Produto atualizado com sucesso!')
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!')
       this.router.navigate(['/meuPerfil/meusProdutos'])
     })
   }

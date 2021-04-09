@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RodapeComponent } from './rodape.component';
+import { TelaFavoritosComponent } from './tela-favoritos.component';
 
-describe('RodapeComponent', () => {
-  let component: RodapeComponent;
-  let fixture: ComponentFixture<RodapeComponent>;
+describe('TelaFavoritosComponent', () => {
+  let component: TelaFavoritosComponent;
+  let fixture: ComponentFixture<TelaFavoritosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RodapeComponent ]
+      declarations: [ TelaFavoritosComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RodapeComponent);
+    fixture = TestBed.createComponent(TelaFavoritosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

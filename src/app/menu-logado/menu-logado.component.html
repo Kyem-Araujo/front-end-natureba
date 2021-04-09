@@ -64,7 +64,7 @@
 
 <!-- IconeUser-->
 <div class="d-flex justify-content-end pr-4">
-    <button class="btn btn-floating " data-toggle="modal" data-target="#ExemploModalCentralizado">
+    <button class="btn btn-floating " data-toggle="modal" data-target="#ExemploModalCentralizado" routerLink='/meuPerfil'>
         <img src="https://i.imgur.com/lAnmYcd.png" width="40" height="40" alt="icone do login">
     </button>
 </div>
@@ -126,73 +126,20 @@
 
 <!--/menuProdutos-->
 <div class="container-fluid tamanho d-flex justify-content-end">
+    <ul class="nav nav-tabs">
+  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle adapt" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Olá, {{nomeUsuario}}</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink='meuPerfil'>Meu perfil</a>
+            <a class="dropdown-item" routerLink="meuPerfil/minhasCompras">Minhas compras</a>
+            <a class="dropdown-item" routerLink="meuPerfil/meusFavoritos">Meus favoritos</a>
+            <a class="dropdown-item" routerLink="meuPerfil/meusProdutos">Meus produtos</a>
+            <a class="dropdown-item" (click)='sair()'>Sair</a>
+          </div>
+        </li>
+        
+      </ul>
 
-
-    <!-- continuação para o modal do Botão para acionar o pop up de Login-->
-
-    <div class="modal fade" id="ExemploModalCentralizado">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-                <div>
-                    <div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                            <!--fechamento X--> <span aria-hidden="true">&times;</span>
-                            <!--/fechamento X-->
-                        </button>
-                    </div>
-
-                    <!--card Pop-Up-->
-
-                    <body class="estiloDoPopUp">
-                        <div class="containerPopUp">
-                            <div class="pt-0">
-                                <h1>Já tem uma conta?</h1>
-
-                                <!--Campo preenchimento usuário já cadastrado-->
-                                <div class="label-float">
-                                    <input [(ngModel)]='usuarioLogin.emailUsuario' type="text" id="email"
-                                        placeholder="">
-                                    <label for="email">E-mail</label>
-                                </div>
-
-                                <div class="label-float">
-                                    <input [(ngModel)]='usuarioLogin.senhaUsuario' type="text" id="senha"
-                                        placeholder="">
-                                    <label for="senha">Senha</label>
-                                </div>
-                                <!--Campo preenchimento usuário já cadastrado-->
-
-                                <!--Botão de Entrar-->
-                                <div class="justify-center">
-
-                                    <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal" >Seja bem-vinde</button>
-
-                                    <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal"  >Seja bem-vinde</button>
-
-                                </div>
-                                <!--/Botão de Entrar-->
-                                <div class="justify-center">
-                                    <hr>
-                                </div>
-
-                                <h1>Ainda não tem uma conta?</h1>
-
-                                <!--Botão de Cadastrar-->
-                                <div class="justify-center">
-                                    <button routerLink='/cadastrar' class="bt-entrar close" data-dismiss="modal">Venha para nossa Ecovila</button>
-                                </div>
-                                <!--Botão de Cadastrar-->
-
-                            </div>
-                        </div>
-                    </body>
-
-                </div>
-            </div>
-
-            <!--/card Pop-Up-->
-
-        </div>
-    </div>
 </div>
+

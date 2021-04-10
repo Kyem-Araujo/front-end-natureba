@@ -38,7 +38,4 @@ export class TelaProdutosComponent implements OnInit {
     })
   }
 
-
-
-
 }

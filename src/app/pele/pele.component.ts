@@ -12,14 +12,14 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './categorias.component.html',
   styleUrls: ['./categorias.component.css']
 })
-export class CategoriasComponent implements OnInit {
+export class PeleComponent implements OnInit {
 
   produto: Produto = new Produto
 
   categoria: Categoria = new Categoria()
   listaProdutos: Produto[]
   contadorArvore = environment.contadorArvore
-  variavel: number
+  idCategoria: number = 4
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.cpf
@@ -32,13 +32,11 @@ export class CategoriasComponent implements OnInit {
 
   constructor(private produtoService: ProdutoService, 
     private categoriaService: CategoriaService, 
-    private route: ActivatedRoute,
-    private router: Router) { }
+    ) { }
 
   ngOnInit() {
     window.scroll(0,0)
-    this.variavel  = this.route.snapshot.params['id']
-    this.findByIdCategoria(this.variavel)
+    this.findByIdCategoria(this.idCategoria)
   }
 
   findByIdProduto(idProduto: number) {

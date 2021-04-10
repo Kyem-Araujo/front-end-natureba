@@ -28,6 +28,8 @@ import { PaginaProdutoComponent } from './pagina-produto/pagina-produto.componen
 import { PaginaProdutoVendedorComponent } from './pagina-produto-vendedor/pagina-produto-vendedor.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { CabeloComponent } from './cabelo/cabelo.component';
+import { PeleComponent } from './pele/pele.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { AlertasComponent } from './alertas/alertas.component';
     PaginaProdutoComponent,
     PaginaProdutoVendedorComponent,
     QuemSomosComponent,
-    AlertasComponent
+    AlertasComponent,
+    CabeloComponent,
+    PeleComponent
  ],
   imports: [
     BrowserModule,

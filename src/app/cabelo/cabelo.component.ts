@@ -12,14 +12,14 @@ import { ProdutoService } from '../service/produto.service';
   templateUrl: './categorias.component.html',
   styleUrls: ['./categorias.component.css']
 })
-export class CategoriasComponent implements OnInit {
+export class CabeloComponent implements OnInit {
 
   produto: Produto = new Produto
 
   categoria: Categoria = new Categoria()
   listaProdutos: Produto[]
   contadorArvore = environment.contadorArvore
-  variavel: number
+  idCategoria: number = 2
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.cpf
@@ -37,8 +37,7 @@ export class CategoriasComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    this.variavel  = this.route.snapshot.params['id']
-    this.findByIdCategoria(this.variavel)
+    this.findByIdCategoria(this.idCategoria)
   }
 
   findByIdProduto(idProduto: number) {

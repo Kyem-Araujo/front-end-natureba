@@ -14,6 +14,11 @@ import { AuthService } from '../service/auth.service';
 export class MenuComponent implements OnInit {
 
   usuarioLogin: UsuarioLogin = new UsuarioLogin()
+  maquiagem: number = 1
+  cabelo: number = 2
+  cheirinho: number = 3
+  peleMacia: number = 4
+  cuide: number = 5
 
   constructor(private authService: AuthService,
      private router: Router,

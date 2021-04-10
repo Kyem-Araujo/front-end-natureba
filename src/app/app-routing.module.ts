@@ -24,7 +24,7 @@ const routes: Routes = [
 
   {path: 'meuPerfil/alterarCadastro', component: AlterarcadastroComponent},
   {path: 'alterarCadastro/:id', component: AlterarcadastroComponent},
-  {path: 'pesquisa/:pesquisa', component: CategoriasComponent},
+  {path: 'verCategoria/:categoria', component: CategoriasComponent},
   {path: 'meuPerfil/meusProdutos/verProduto/id:Produto/alterarProduto/:idProduto', component: AlterarprodutoComponent},
   {path: 'meuPerfil/meusProdutos/alterarProduto/:idProduto/:cpf', component: AlterarprodutoComponent},
   {path: 'cadastrar', component: CadastrarComponent},

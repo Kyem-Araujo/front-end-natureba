@@ -82,33 +82,25 @@
     <div class=" collapse navbar-collapse " id="conteudoNavbarSuportado">
         <ul class="navbar-nav cor altera-menu posicao ">
 
-            <li class="nav-item">
-                <a class="  nav-link" href="#ofertas">Baratinhos</a>
-            </li>
-
 
             <li class="nav-item">
-                <a class="nav-link" href="#maquiagem">Maquiagem</a>
+                <a class="nav-link" [routerLink]="['/verCategoria', maquiagem]">Maquiagem</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" href="#cabelo">Para o cabelo</a>
+                <a class="  nav-link" [routerLink]="['/verCategoria', cabelo]">Para o cabelo</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" href="#cheirinho">Cheirinho bom</a>
+                <a class="  nav-link" [routerLink]="['/verCategoria', cheirinho]">Cheirinho bom</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" href="#pele">Pele macia</a>
+                <a class="  nav-link" [routerLink]="['/verCategoria', peleMacia]">Pele macia</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" href="#autocuidado">Cuide-se</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="  nav-link" href="#vender">Vender</a>
+                <a class="  nav-link" [routerLink]="['/verCategoria', cuide]">Cuide-se</a>
             </li>
 
         </ul>

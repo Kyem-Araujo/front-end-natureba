@@ -17,9 +17,9 @@ export class CategoriasComponent implements OnInit {
   produto: Produto = new Produto
 
   categoria: Categoria = new Categoria()
-  listaCategorias: Categoria[]
-  idCategoria: number
+  listaProdutos: Produto[]
   contadorArvore = environment.contadorArvore
+  variavel: number
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.cpf
@@ -37,9 +37,9 @@ export class CategoriasComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0,0)
-    this.findAllCategorias()
     let id = this.route.snapshot.params['id']
-    this.findByIdProduto
+    this.variavel = this.route.snapshot.params['id']
+    this.findByIdCategoria(this.variavel)
   }
 
   findByIdProduto(idProduto: number) {
@@ -48,14 +48,8 @@ export class CategoriasComponent implements OnInit {
     })
   }
 
-  findAllCategorias() {
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) =>{
-      this.listaCategorias = resp
-    })
-  }
-
-  findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
+  findByIdCategoria(idCategoria: number) {
+    this.categoriaService.getByIdCategoria(idCategoria).subscribe((resp: Categoria) => {
       this.categoria
     })
   }

@@ -25,6 +25,13 @@ export class AlterarcadastroComponent implements OnInit {
     window.scroll(0,0)
     this.cpfUsuario = this.route.snapshot.params['id']
     this.findByCpf(this.cpfUsuario)
+    this.usuario.cpf= environment.cpf
+    this.usuario.nomeSocial=environment.nomeSocial
+    this.usuario.nomeCompletoUsuario=environment.nomeCompletoUsuario
+    this.usuario.nomeUsuario=environment.nomeUsuario
+    this.usuario.emailUsuario=environment.emailUsuario
+    this.usuario.contadorArvore=environment.contadorArvore
+    
   }
 
   confirmSenha(event: any){

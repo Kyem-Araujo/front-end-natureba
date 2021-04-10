@@ -14,7 +14,7 @@
 
         <div class="card mr-4 ml-4 ">
             <div class=" card-group text-center" *ngFor='let item of usuario.produtosUsuario | orderBy : key : reverse'>
-                <div class="card ">
+                <div class="card w- ">
                     <img class="card-img-top" src="{{item.fotoProduto1}}" alt="Imagem de capa do card">
                     <div class="card-body">
                         <h5 class="card-title">{{item.nomeProduto}}</h5>
@@ -24,6 +24,8 @@
                 </div>
             </div>
         </div>
+        <!--Minhas Postagens-->
+    
 
 
     </div>

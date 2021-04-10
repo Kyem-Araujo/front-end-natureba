@@ -40,7 +40,7 @@ export class UsuarioService {
   }
 
   alterarCadastro(usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>('http://localhost:8080/usuario/alterar/senha', usuario)
+    return this.http.put<Usuario>('http://localhost:8080/usuario/alterar/senha', usuario, this.token)
   }
 
   deletarConta(cpfUsuario: string) {

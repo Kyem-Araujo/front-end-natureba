@@ -63,6 +63,68 @@
 <!--/logo-->
 
 <!-- IconeUser-->
+<div class="d-flex justify-content-end pr-4">
+    <button class="btn btn-floating " data-toggle="modal" data-target="#ExemploModalCentralizado" routerLink='/meuPerfil'>
+        <img src="https://i.imgur.com/lAnmYcd.png" width="40" height="40" alt="icone do login">
+    </button>
+</div>
+<!-- /IconeUser-->
+
+<!-- menuProdutos-->
+
+<nav class="navbar navbar-expand-lg font-weight-bold navbar-light m-0" style="background-color: white">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class=" collapse navbar-collapse " id="conteudoNavbarSuportado">
+        <ul class="navbar-nav cor altera-menu posicao ">
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#ofertas">Baratinhos</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="#maquiagem">Maquiagem</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#cabelo">Para o cabelo</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#cheirinho">Cheirinho bom</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#pele">Pele macia</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#autocuidado">Cuide-se</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#vender">Vender</a>
+            </li>
+
+        </ul>
+
+        <!--/Barra de pesquisa-->
+        <div class="pesquisa d-flex justify-content-end" id="busca">
+            <input type="text" id="text" name="t" value placeholder="O que está procurando?" id="txtBusca"
+                class="clear-default-value search-fiel">
+            <i class="fa fa-search" aria-hidden="true"></i>
+
+        </div>
+    </div>
+
+</nav>
+
+<!--/menuProdutos-->
 <div class="container-fluid tamanho d-flex justify-content-end">
     <ul class="nav nav-tabs">
   
@@ -80,57 +142,4 @@
       </ul>
 
 </div>
-<!-- /IconeUser-->
-
-<!-- menuProdutos-->
-
-<nav class="navbar navbar-expand-lg font-weight-bold navbar-light m-0" style="background-color: white">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-        aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class=" collapse navbar-collapse " id="conteudoNavbarSuportado">
-        <ul class="navbar-nav cor altera-menu posicao ">
-
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/verCategoria', maquiagem]">Maquiagem</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', cabelo]">Para o cabelo</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', cheirinho]">Cheirinho bom</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', peleMacia]">Pele macia</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', cuide]">Cuide-se</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="  nav-link" routerLink='meuPerfil/meusProdutos'>Vender</a>
-            </li>
-
-        </ul>
-
-        <!--/Barra de pesquisa-->
-        <div class="pesquisa d-flex justify-content-end" id="busca">
-            <input type="text" id="text" name="t" value placeholder="O que está procurando?" id="txtBusca"
-                class="clear-default-value search-fiel">
-            <i class="fa fa-search" aria-hidden="true"></i>
-
-        </div>
-    </div>
-
-</nav>
-
-<!--/menuProdutos-->
-
 

@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { OrderModule } from 'ngx-order-pipe';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -27,7 +25,8 @@ import { MenuLogadoComponent } from './menu-logado/menu-logado.component';
 import { PaginaProdutoComponent } from './pagina-produto/pagina-produto.component';
 import { PaginaProdutoVendedorComponent } from './pagina-produto-vendedor/pagina-produto-vendedor.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { AlertasComponent } from './alertas/alertas.component';
+
+
 
 @NgModule({
   declarations: [
@@ -51,16 +50,13 @@ import { AlertasComponent } from './alertas/alertas.component';
     MenuLogadoComponent,
     PaginaProdutoComponent,
     PaginaProdutoVendedorComponent,
-    QuemSomosComponent,
-    AlertasComponent
+    QuemSomosComponent
  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    ModalModule.forRoot(),
-    OrderModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

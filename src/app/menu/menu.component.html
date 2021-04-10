@@ -82,25 +82,33 @@
     <div class=" collapse navbar-collapse " id="conteudoNavbarSuportado">
         <ul class="navbar-nav cor altera-menu posicao ">
 
+            <li class="nav-item">
+                <a class="  nav-link" href="#ofertas">Baratinhos</a>
+            </li>
+
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/verCategoria', maquiagem]">Maquiagem</a>
+                <a class="nav-link" href="#maquiagem">Maquiagem</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', cabelo]">Para o cabelo</a>
+                <a class="  nav-link" href="#cabelo">Para o cabelo</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', cheirinho]">Cheirinho bom</a>
+                <a class="  nav-link" href="#cheirinho">Cheirinho bom</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', peleMacia]">Pele macia</a>
+                <a class="  nav-link" href="#pele">Pele macia</a>
             </li>
 
             <li class="nav-item">
-                <a class="  nav-link" [routerLink]="['/verCategoria', cuide]">Cuide-se</a>
+                <a class="  nav-link" href="#autocuidado">Cuide-se</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="  nav-link" href="#vender">Vender</a>
             </li>
 
         </ul>
@@ -108,7 +116,7 @@
         <!--/Barra de pesquisa-->
         <div class="pesquisa d-flex justify-content-end" id="busca">
             <input type="text" id="text" name="t" value placeholder="O que está procurando?" id="txtBusca"
-                class="clear-default-value search-fiel" >
+                class="clear-default-value search-fiel">
             <i class="fa fa-search" aria-hidden="true"></i>
 
         </div>
@@ -149,7 +157,7 @@
                                 </div>
 
                                 <div class="label-float">
-                                    <input [(ngModel)]='usuarioLogin.senhaUsuario' type="password" id="senha"
+                                    <input [(ngModel)]='usuarioLogin.senhaUsuario' type="text" id="senha"
                                         placeholder="">
                                     <label for="senha">Senha</label>
                                 </div>
@@ -159,6 +167,8 @@
                                 <div class="justify-center">
 
                                     <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal" >Seja bem-vinde</button>
+
+                                    <button (click)='entrar()'  class="bt-entrar close" data-dismiss="modal"  >Seja bem-vinde</button>
 
                                 </div>
                                 <!--/Botão de Entrar-->

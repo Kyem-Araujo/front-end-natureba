@@ -4,7 +4,6 @@ import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
 import { Usuario } from '../model/Usuario';
-import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -25,8 +24,7 @@ export class CriarprodutoComponent implements OnInit {
 
   constructor(private produtoService: ProdutoService, 
     private categoriaService: CategoriaService, 
-    private router: Router,
-    private alertas: AlertasService) { }
+    private router: Router) { }
 
   ngOnInit() {
     window.scroll(0,0)
@@ -54,7 +52,7 @@ export class CriarprodutoComponent implements OnInit {
 
     this.produtoService.criarProdutoPorUsuario(this.produto, environment.cpf).subscribe((resp: Produto) => {
       this.produto = resp
-      this.alertas.showAlertSuccess('Parabéns pelo novo produto!')
+      alert('Parabéns pelo novo produto!')
       this.router.navigate(['/meuPerfil/meusProdutos'])
     })
   }

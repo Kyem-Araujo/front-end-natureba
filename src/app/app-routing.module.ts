@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlterarcadastroComponent } from './alterarcadastro/alterarcadastro.component';
 import { AlterarprodutoComponent } from './alterarproduto/alterarproduto.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { CategoriasComponent } from './categorias/categorias.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 import { CorpoHomeComponent } from './corpo-home/corpo-home.component';
 import { CriarprodutoComponent } from './criarproduto/criarproduto.component';
@@ -24,7 +23,6 @@ const routes: Routes = [
 
   {path: 'meuPerfil/alterarCadastro', component: AlterarcadastroComponent},
   {path: 'alterarCadastro/:id', component: AlterarcadastroComponent},
-  {path: 'verCategoria/:categoria', component: CategoriasComponent},
   {path: 'meuPerfil/meusProdutos/verProduto/id:Produto/alterarProduto/:idProduto', component: AlterarprodutoComponent},
   {path: 'meuPerfil/meusProdutos/alterarProduto/:idProduto/:cpf', component: AlterarprodutoComponent},
   {path: 'cadastrar', component: CadastrarComponent},

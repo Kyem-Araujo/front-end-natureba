@@ -18,15 +18,12 @@ export class TelaProdutosComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
   idUsuario = environment.cpf
-  
-
-  key = 'data'
-  reverse = true
+  usuarioService: UsuarioService
 
   constructor(private produtoService: ProdutoService, 
-    private usuarioService:UsuarioService,
+    
     private router: Router) { }
-  
+
   ngOnInit() {
     window.scroll(0,0)
     this.findByCpf()
@@ -37,5 +34,8 @@ export class TelaProdutosComponent implements OnInit {
       this.usuario = resp
     })
   }
+
+
+
 
 }

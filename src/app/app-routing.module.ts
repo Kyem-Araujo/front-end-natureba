@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlterarcadastroComponent } from './alterarcadastro/alterarcadastro.component';
 import { AlterarprodutoComponent } from './alterarproduto/alterarproduto.component';
-import { CabeloComponent } from './cabelo/cabelo.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { CategoriasComponent } from './categorias/categorias.component';
 import { ComoFuncionaComponent } from './como-funciona/como-funciona.component';
 import { CorpoHomeComponent } from './corpo-home/corpo-home.component';
 import { CriarprodutoComponent } from './criarproduto/criarproduto.component';
@@ -13,7 +11,6 @@ import { MinhasComprasComponent } from './minhas-compras/minhas-compras.componen
 import { NossoTimeComponent } from './nosso-time/nosso-time.component';
 
 import { PaginaProdutoVendedorComponent } from './pagina-produto-vendedor/pagina-produto-vendedor.component';
-import { PeleComponent } from './pele/pele.component';
 
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 
@@ -26,12 +23,9 @@ const routes: Routes = [
 
   {path: 'meuPerfil/alterarCadastro', component: AlterarcadastroComponent},
   {path: 'alterarCadastro/:id', component: AlterarcadastroComponent},
-  {path: 'verCategoria/:categoria', component: CategoriasComponent},
   {path: 'meuPerfil/meusProdutos/verProduto/id:Produto/alterarProduto/:idProduto', component: AlterarprodutoComponent},
   {path: 'meuPerfil/meusProdutos/alterarProduto/:idProduto/:cpf', component: AlterarprodutoComponent},
   {path: 'cadastrar', component: CadastrarComponent},
-  {path: 'cabelo', component: CabeloComponent},
-  {path: 'pele', component: PeleComponent},
   {path: 'comoFunciona', component: ComoFuncionaComponent},
   {path: 'paginaInicial', component: CorpoHomeComponent},
   {path: 'meuPerfil/meusProdutos/criarProduto', component: CriarprodutoComponent},

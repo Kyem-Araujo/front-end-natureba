@@ -54,13 +54,13 @@
 
             <div class="col-sm-4 d-flex justify-content-center">
               <button type="button" class="btncomprar" data-toggle="modal" data-target="#ExemploModalCentralizado5"
-              [routerLink]="['/alterarProduto', produto.idProduto]">
+              [routerLink]="['alterarProduto', produto.idProduto]">
                 Alterar produto
               </button>
             </div>
 
             <div class="col-sm-4 d-flex justify-content-center ">
-              <button (click)='deletarProduto()' type="button" class="" data-toggle="modal" data-target="#ExemploModalCentralizado5">
+              <button (click)='deletarProduto' type="button" class="" data-toggle="modal" data-target="#ExemploModalCentralizado5">
                 Excluir produto
               </button>
             </div>
